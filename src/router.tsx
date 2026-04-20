@@ -1,22 +1,36 @@
 import { createRouter, createRootRoute, createRoute } from "@tanstack/react-router";
 import Top from "./Top";
 import Diagnosis from "./Diagnosis";
+import Choice from "./Choice";
+import Shuffle from "./Shuffle";
 
 const rootRoute = createRootRoute();
 
-const indexRoute = createRoute({
+const topRoute = createRoute({
     getParentRoute: () => rootRoute,
     path: "/",
     component: Top,
 });
 
-const aboutRoute = createRoute({
+const diagnosisRoute = createRoute({
     getParentRoute: () => rootRoute,
-    path: "/Dianosis",
+    path: "/Diagnosis",
     component: Diagnosis,
 });
 
-const routeTree = rootRoute.addChildren([indexRoute, aboutRoute]);
+const choiceRoute = createRoute({
+    getParentRoute: () => rootRoute,
+    path: "/Choice",
+    component: Choice,
+});
+
+const shuffleRoute = createRoute({
+    getParentRoute: () => rootRoute,
+    path: "/Shuffle",
+    component: Shuffle,
+});
+
+const routeTree = rootRoute.addChildren([topRoute, diagnosisRoute, choiceRoute, shuffleRoute]);
 
 export const router = createRouter({
     routeTree,

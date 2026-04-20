@@ -1,4 +1,5 @@
 import { Link } from "@tanstack/react-router";
+import "./Diagnosis.css";
 
 function Diagnosis() {
     return (
@@ -6,7 +7,7 @@ function Diagnosis() {
             <p>診断、していく？</p>
             <Link to="/">Top</Link>
             <br />
-            <Link to="Shuffle">診断結果はこちらよ</Link>
+            <Link to="/Shuffle">診断結果はこちらよ</Link>
         </div>
     );
 }

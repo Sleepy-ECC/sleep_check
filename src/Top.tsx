@@ -5,9 +5,9 @@ function Top() {
     return (
         <div>
             <p>今日はどっちにしますか？</p>
-            <Link to="/Diagnosis">Diagnosis</Link>
+            <Link to="/Diagnosis">診断するかい？</Link>
             <br />
-            <Link to="/About">Choice</Link>
+            <Link to="/Choice">選ぶこともできんでー</Link>
         </div>
     );
 }
