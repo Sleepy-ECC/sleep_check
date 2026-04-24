@@ -11,11 +11,18 @@ function Top() {
                     <h2>1日お疲れ様じゃ</h2>
                 </section>
                 <img src={Hituji} alt="" />
-                <Link to="/Diagnosis">
-                    <SelectBtn text="診断で選ぶ" imgSrc={Hituji} />
-                </Link>
+                <div className="select_btns">
+                    <Link to="/Diagnosis">
+                        <SelectBtn text="診断で選ぶ" imgSrc={Hituji} />
+                    </Link>
 
-                <Link to="/Choice">選ぶこともできんでー</Link>
+                    <Link to="/Choice">
+                        <SelectBtn text="自分で選ぶ" imgSrc={Hituji} />
+                    </Link>
+                </div>
+                <div className="foot_link">
+                    <Link to="/">ログイン・新規登録はこちら</Link>
+                </div>
             </div>
         </>
     );
