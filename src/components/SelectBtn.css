@@ -1,0 +1,26 @@
+.btn_wrap {
+    /* width: 150px;
+    height: 150px; */
+    padding: 20px 30px;
+    border-radius: 32px;
+    border: #fff 2px solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: 0.2s;
+    &:hover {
+        border: #ffc800 solid 2px;
+    }
+    img {
+        width: 90px;
+        height: 90px;
+        margin: 0;
+    }
+    p {
+        font-size: 1.6rem;
+        color: #fff;
+        font-weight: 900;
+    }
+}
