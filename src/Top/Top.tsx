@@ -1,6 +1,6 @@
 import "./Top.css";
-import Hituji from "../assets/hituzi.png";
 import { Link } from "@tanstack/react-router";
+import Hituji from "../assets/hituzi.png";
 import SelectBtn from "../components/SelectBtn";
 
 function Top() {
