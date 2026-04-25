@@ -1,13 +1,29 @@
-import { Link } from "@tanstack/react-router";
+// import { Link } from "@tanstack/react-router";
 import "./Choice.css";
+import ChoiceList from "../components/ChoiceList";
+
+type Select = {
+    text: string;
+    path: string;
+};
+
+const selects: Array<Select> = [
+    { text: "認知シャッフル睡眠法", path: "/Shuffle" },
+    { text: "米軍式睡眠法", path: "/" },
+    { text: "4-7-8呼吸法", path: "/" },
+    { text: "アリス式睡眠法", path: "/" },
+    { text: "イメージ誘導法", path: "/" },
+    { text: "漸進的筋弛緩法", path: "/" },
+    { text: "ホワイトノイズ", path: "/" },
+    { text: "逆説的意図", path: "/" },
+];
 
 function Choice() {
     return (
-        <div>
-            <p>睡眠法を選んでね</p>
-            <Link to="/">Topに戻るのかな？</Link>
-            <br />
-            <Link to="/Shuffle">選べるわよ</Link>
+        <div className="choice_lists">
+            {selects.map((item, index) => (
+                <ChoiceList text={item.text} path={item.path} index={index} />
+            ))}
         </div>
     );
 }

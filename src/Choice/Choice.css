@@ -1,0 +1,6 @@
+.choice_lists {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 40px 35px;
+}
