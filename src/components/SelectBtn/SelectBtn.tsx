@@ -1,15 +1,16 @@
+import HituImg from "../HituImg/HituImg";
 import "./SelectBtn.css";
 
 type Props = {
     text: string;
-    imgSrc: string;
+    type: React.ComponentProps<typeof HituImg>["type"];
 };
 
-export default function SelectBtn({ text, imgSrc }: Props) {
+export default function SelectBtn({ text, type }: Props) {
     return (
         <>
             <div className="btn_wrap">
-                <img src={imgSrc} alt="" />
+                <HituImg type={type} />
                 <p>{text}</p>
             </div>
         </>

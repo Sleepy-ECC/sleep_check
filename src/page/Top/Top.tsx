@@ -1,6 +1,5 @@
 import "./Top.css";
 import { Link } from "@tanstack/react-router";
-import Hituji from "../../assets/hituzi.png";
 import SelectBtn from "../../components/SelectBtn/SelectBtn";
 import MsgBox from "../../components/MsgBox/MsgBox";
 import HituImg from "../../components/HituImg/HituImg";
@@ -13,11 +12,11 @@ function Top() {
                 <HituImg type="normal" />
                 <div className="select_btns">
                     <Link to="/Diagnosis">
-                        <SelectBtn text="診断で選ぶ" imgSrc={Hituji} />
+                        <SelectBtn text="診断で選ぶ" type="normal" />
                     </Link>
 
                     <Link to="/Choice">
-                        <SelectBtn text="自分で選ぶ" imgSrc={Hituji} />
+                        <SelectBtn text="自分で選ぶ" type="normal" />
                     </Link>
                 </div>
                 <div className="foot_link">
