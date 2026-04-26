@@ -1,18 +1,31 @@
 import SelectBtn from "../SelectBtn/SelectBtn";
 import "./QuestionBox.css";
+import HituImg from "../HituImg/HituImg";
 
-export default function QuestionBox() {
+type Props = {
+    question: {
+        text: string;
+        choices: { text: string; type: React.ComponentProps<typeof HituImg>["type"] }[];
+    };
+    step: number;
+    total: number;
+};
+
+export default function QuestionBox({ question, step, total }: Props) {
     return (
         <div className="wrapper">
-            <h3>今どちらに近いんじゃ</h3>
+            <h3>{question.text}</h3>
+
             <div className="select_btn_wrap">
-                <SelectBtn text="頭がうるさい" type="headache" />
-                <SelectBtn text="体が落ち着かない" type="tremble" />
+                {question.choices.map((choice, index) => (
+                    <SelectBtn key={index} text={choice.text} type={choice.type} />
+                ))}
             </div>
+
             <div className="dots">
-                <span className="dot active"></span>
-                <span className="dot"></span>
-                <span className="dot"></span>
+                {[...Array(total)].map((_, i) => (
+                    <span key={i} className={`dot ${i === step ? "active" : ""}`} />
+                ))}
             </div>
         </div>
     );

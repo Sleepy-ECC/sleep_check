@@ -8,7 +8,15 @@ import Btn from "../../components/Btn/Btn";
 function Diagnosis() {
     const [step, setStep] = useState(0);
 
-    const questions = [
+    type Question = {
+        text: string;
+        choices: {
+            text: string;
+            type: React.ComponentProps<typeof HituImg>["type"];
+        }[];
+    };
+
+    const questions: Question[] = [
         {
             text: "今どちらに近いんじゃ？",
             choices: [
@@ -27,7 +35,7 @@ function Diagnosis() {
             text: "最後はどんな気持ちじゃ？",
             choices: [
                 { text: "寝ないと！", type: "surprise" },
-                { text: "まぁいいや〜", type: "normal" },
+                { text: "まぁいいや〜", type: "wakeup" },
             ],
         },
     ];
@@ -38,10 +46,20 @@ function Diagnosis() {
                 <MsgBox text="診断を始めるぞう" />
                 <HituImg type="normal" />
             </div>
-            <QuestionBox />
+            <QuestionBox question={questions[step]} step={step} total={questions.length} />
             <div className="btn_group">
-                <Btn text="戻る" path="" color="gray" />
-                <Btn text="進む" path="" color="black" />
+                <Btn
+                    text="戻る"
+                    path=""
+                    color="gray"
+                    onClick={() => setStep((prev) => Math.max(prev - 1, 0))}
+                />
+                <Btn
+                    text="進む"
+                    path=""
+                    color="black"
+                    onClick={() => setStep((prev) => Math.min(prev + 1, questions.length - 1))}
+                />
             </div>
         </>
     );
