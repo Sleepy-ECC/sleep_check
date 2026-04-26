@@ -1,0 +1,12 @@
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    color: #fff;
+    font-size: 2rem;
+    border: 1px solid #f8f8f8;
+    border-radius: 16px;
+    padding: 13px 18px;
+    margin: 0 auto;
+}

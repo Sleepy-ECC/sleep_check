@@ -1,0 +1,13 @@
+.head_msg {
+    padding: 10px 20px;
+    border: 1px #f8f8f8 solid;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h2 {
+        font-size: 2rem;
+        color: #f0f0f0;
+        font-weight: normal;
+    }
+}
