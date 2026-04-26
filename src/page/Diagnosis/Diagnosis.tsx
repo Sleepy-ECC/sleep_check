@@ -46,7 +46,12 @@ function Diagnosis() {
                 <MsgBox text="診断を始めるぞう" />
                 <HituImg type="normal" />
             </div>
-            <QuestionBox question={questions[step]} step={step} total={questions.length} />
+            <QuestionBox
+                question={questions[step]}
+                step={step}
+                total={questions.length}
+                onSelect={() => setStep((prev) => Math.min(prev + 1, questions.length - 1))}
+            />{" "}
             <div className="btn_group">
                 <Btn
                     text="戻る"
