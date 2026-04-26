@@ -1,8 +1,8 @@
 import { createRouter, createRootRoute, createRoute } from "@tanstack/react-router";
-import Top from "./Top/Top";
-import Diagnosis from "./Diagnosis/Diagnosis";
-import Choice from "./Choice/Choice";
-import Shuffle from "./Shuffle/Shuffle";
+import Top from "./page/Top/Top";
+import Diagnosis from "./page/Diagnosis/Diagnosis";
+import Choice from "./page/Choice/Choice";
+import Shuffle from "./page/Shuffle/Shuffle";
 
 const rootRoute = createRootRoute();
 

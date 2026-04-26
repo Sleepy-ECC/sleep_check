@@ -1,6 +1,6 @@
 import "./ChoiceList.css";
 import { Link } from "@tanstack/react-router";
-import icon from "../assets/question_icon.png";
+import icon from "../../assets/question_icon.png";
 
 type Props = {
     text: string;

@@ -1,6 +1,6 @@
 // import { Link } from "@tanstack/react-router";
 import "./Choice.css";
-import ChoiceList from "../components/ChoiceList";
+import ChoiceList from "../../components/ChoiceList/ChoiceList";
 
 type Select = {
     text: string;
