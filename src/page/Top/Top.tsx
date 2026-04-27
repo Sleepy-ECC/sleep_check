@@ -20,7 +20,7 @@ function Top() {
                     </Link>
                 </div>
                 <div className="foot_link">
-                    <Link to="/">ログイン・新規登録はこちら</Link>
+                    <Link to="/login">ログイン・新規登録はこちら</Link>
                 </div>
             </div>
         </>

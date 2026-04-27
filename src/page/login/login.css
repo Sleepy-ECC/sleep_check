@@ -1,0 +1,31 @@
+.password_field {
+    margin-bottom: 18px;
+}
+
+.forgot_password_link {
+    align-self: flex-end;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.4;
+    text-decoration: none;
+}
+
+.login_submit_btn {
+    margin-top: 0;
+}
+
+.register_guidance {
+    margin-top: 58px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.register_guidance a {
+    color: #ffcb0d;
+    font-size: 1.6rem;
+    font-weight: 800;
+    text-decoration: none;
+}

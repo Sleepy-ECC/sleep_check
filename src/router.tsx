@@ -4,6 +4,8 @@ import Diagnosis from "./page/Diagnosis/Diagnosis";
 import Choice from "./page/Choice/Choice";
 import Shuffle from "./page/Shuffle/Shuffle";
 import ShuffleTimer from "./page/ShuffleTimer/ShuffleTimer";
+import Register from "./page/register/register";
+import Login from "./page/login/login";
 
 const rootRoute = createRootRoute();
 
@@ -44,6 +46,20 @@ const routeTree = rootRoute.addChildren([
     shuffleRoute,
     shuffleTimerRoute,
 ]);
+
+const registerRoute = createRoute({
+    getParentRoute: () => rootRoute,
+    path: "/register",
+    component: Register,
+});
+
+const loginRoute = createRoute({
+    getParentRoute: () => rootRoute,
+    path: "/login",
+    component: Login,
+});
+
+const routeTree = rootRoute.addChildren([topRoute, diagnosisRoute, choiceRoute, shuffleRoute, registerRoute, loginRoute]);
 
 export const router = createRouter({
     routeTree,
