@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "@tanstack/react-router";
 import "./Diagnosis.css";
 import HituImg from "../../components/HituImg/HituImg";
 import MsgBox from "../../components/MsgBox/MsgBox";
@@ -7,6 +8,7 @@ import Btn from "../../components/Btn/Btn";
 
 function Diagnosis() {
     const [step, setStep] = useState(0);
+    const navigate = useNavigate();
 
     type Question = {
         text: string;
@@ -40,6 +42,8 @@ function Diagnosis() {
         },
     ];
 
+    const isLast = step === questions.length - 1;
+
     return (
         <>
             <div className="title">
@@ -50,7 +54,13 @@ function Diagnosis() {
                 question={questions[step]}
                 step={step}
                 total={questions.length}
-                onSelect={() => setStep((prev) => Math.min(prev + 1, questions.length - 1))}
+                onSelect={() => {
+                    if (isLast) {
+                        navigate({ to: "/Shuffle" });
+                    } else {
+                        setStep((prev) => prev + 1);
+                    }
+                }}
             />{" "}
             <div className="btn_group">
                 <Btn
@@ -60,11 +70,16 @@ function Diagnosis() {
                     onClick={() => setStep((prev) => Math.max(prev - 1, 0))}
                 />
                 <Btn
-                    text="進む"
-                    path=""
-                    color="black"
-                    onClick={() => setStep((prev) => Math.min(prev + 1, questions.length - 1))}
-                />
+                    text={isLast ? "診断" : "進む"}
+                    color={isLast ? "yellow" : "black"}
+                    onClick={() => {
+                        if (isLast) {
+                            navigate({ to: "/Shuffle" });
+                        } else {
+                            setStep((prev) => prev + 1);
+                        }
+                    }}
+                />{" "}
             </div>
         </>
     );
