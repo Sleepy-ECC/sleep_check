@@ -50,9 +50,9 @@ function Diagnosis() {
     };
 
     const resultPages = [
-        "/Shuffle",
         "/Kari2",
         "/Kari3",
+        "/Shuffle",
         "/Kari4",
         "/Kari5",
         "/Kari6",
