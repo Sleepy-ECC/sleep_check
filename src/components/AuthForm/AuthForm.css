@@ -33,8 +33,22 @@
     font-weight: 800;
 }
 
+.auth_submit_btn:disabled {
+    cursor: default;
+    opacity: 0.72;
+}
+
 .auth_submit_btn:active {
     transform: translateY(1px);
+}
+
+.auth_error {
+    margin: -2px 0 6px;
+    color: #ffdfdf;
+    font-size: 1.3rem;
+    font-weight: 700;
+    line-height: 1.5;
+    text-align: center;
 }
 
 .cancel_btn {
