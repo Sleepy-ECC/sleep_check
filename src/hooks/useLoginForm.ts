@@ -1,8 +1,8 @@
 import { useNavigate } from "@tanstack/react-router";
 import type { ComponentPropsWithoutRef } from "react";
 import { useState } from "react";
-import { registerUser } from "../api/auth";
-import { validateRegisterForm } from "../features/register/validateRegisterForm";
+import { loginUser } from "../api/auth";
+import { validateLoginForm } from "../features/login/validateLoginForm";
 
 type FormSubmitHandler = NonNullable<ComponentPropsWithoutRef<"form">["onSubmit"]>;
 
@@ -10,7 +10,7 @@ function getFormValue(formData: FormData, name: string) {
     return String(formData.get(name) || "");
 }
 
-export function useRegisterForm() {
+export function useLoginForm() {
     const navigate = useNavigate();
     const [error, setError] = useState("");
     const [isSubmitting, setIsSubmitting] = useState(false);
@@ -18,7 +18,7 @@ export function useRegisterForm() {
     const handleSubmit: FormSubmitHandler = async (event) => {
         event.preventDefault();
 
-        // state反映前後の連打やEnter連打で、同じ登録リクエストを重ねない
+        // state反映前後の連打やEnter連打で、同じログインリクエストを重ねない
         if (isSubmitting) {
             return;
         }
@@ -26,11 +26,9 @@ export function useRegisterForm() {
         setError("");
 
         const formData = new FormData(event.currentTarget);
-        const displayName = getFormValue(formData, "displayName").trim();
         const email = getFormValue(formData, "email").trim();
         const password = getFormValue(formData, "password");
-        const confirmPassword = getFormValue(formData, "confirmPassword");
-        const validationError = validateRegisterForm({ displayName, email, password, confirmPassword });
+        const validationError = validateLoginForm({ email, password });
 
         if (validationError) {
             setError(validationError);
@@ -40,14 +38,13 @@ export function useRegisterForm() {
         setIsSubmitting(true);
 
         try {
-            const { data, ok } = await registerUser({
+            const { data, ok } = await loginUser({
                 email,
                 password,
-                displayName,
             });
 
             if (!ok || !data.accessToken) {
-                setError(data.message || data.error || "新規登録に失敗しました。");
+                setError(data.message || data.error || "ログインに失敗しました。");
                 return;
             }
 
