@@ -1,0 +1,59 @@
+.auth_page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 72px 27px 28px;
+    color: #fff;
+}
+
+.auth_form {
+    width: min(100%, 348px);
+    display: flex;
+    flex-direction: column;
+}
+
+.auth_form h1 {
+    margin-bottom: 36px;
+    text-align: center;
+    font-size: 2.8rem;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.auth_submit_btn {
+    width: 100%;
+    height: 58px;
+    margin-top: 10px;
+    border-radius: 15px;
+    background-color: #ffcb0d;
+    box-shadow: 0 5px 9px rgba(0, 0, 0, 0.32);
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 800;
+}
+
+.auth_submit_btn:active {
+    transform: translateY(1px);
+}
+
+.cancel_btn {
+    width: calc(100% - 28px);
+    height: 58px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    margin-top: 18px;
+    border-radius: 15px;
+    background-color: #a9a9a9;
+    box-shadow: 0 5px 9px rgba(0, 0, 0, 0.32);
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.cancel_btn:active {
+    transform: translateY(1px);
+}
