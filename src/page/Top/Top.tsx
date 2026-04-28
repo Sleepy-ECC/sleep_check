@@ -21,7 +21,7 @@ function Top() {
                     </Link>
                 </div>
                 <div className="foot_link">
-                    <Btn text="睡眠記録を確認" color="yellow" path=""/>
+                    <Btn text="睡眠記録を確認" color="yellow" path="/Memory" />
                     <Link to="/login">ログイン・新規登録はこちら</Link>
                 </div>
             </div>

@@ -11,6 +11,7 @@ import choiceHituji from "../../assets/choice_hituji.png";
 import imageHituji from "../../assets/image_hituji.png";
 import procedureHituji from "../../assets/procedure_hituji.png";
 import unazukiHituji from "../../assets/unazuki_hituji.png";
+import smileHituji from "../../assets/smile_hituji.png";
 
 type Props = {
     type:
@@ -26,7 +27,8 @@ type Props = {
         | "choice"
         | "image"
         | "procedure"
-        | "unazuki";
+        | "unazuki"
+        | "smile";
 };
 
 export default function HituImg({ type }: Props) {
@@ -44,6 +46,7 @@ export default function HituImg({ type }: Props) {
         image: imageHituji,
         procedure: procedureHituji,
         unazuki: unazukiHituji,
+        smile: smileHituji,
     };
 
     return (

@@ -13,6 +13,7 @@ import Pmr from "./page/Pmr/Pmr";
 import Paradoxical from "./page/Paradoxical/Paradoxical";
 import ImageRelax from "./page/ImageRelax/ImageRelax";
 import WhiteNoise from "./page/WhiteNoise/WhiteNoise";
+import Memory from "./page/Memory/Memory";
 
 const rootRoute = createRootRoute();
 
@@ -100,6 +101,12 @@ const whitenoiseRoute = createRoute({
     component: WhiteNoise,
 });
 
+const MemoryRoute = createRoute({
+    getParentRoute: () => rootRoute,
+    path: "/Memory",
+    component: Memory,
+});
+
 const routeTree = rootRoute.addChildren([
     topRoute,
     diagnosisRoute,
@@ -115,6 +122,7 @@ const routeTree = rootRoute.addChildren([
     ParadoxicalRoute,
     ImageRelaxRoute,
     whitenoiseRoute,
+    MemoryRoute,
 ]);
 
 export const router = createRouter({
