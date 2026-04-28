@@ -9,6 +9,7 @@ import Login from "./page/login/login";
 import Beigun from "./page/Beigun/Beigun";
 import CalmBreathing from "./page/CalmBreathing/CalmBreathing";
 import Alice from "./page/Alice/Alice";
+import Pmr from "./page/Pmr/Pmr";
 
 const rootRoute = createRootRoute();
 
@@ -72,6 +73,12 @@ const AliceRoute = createRoute({
     component: Alice,
 });
 
+const PmrRoute = createRoute({
+    getParentRoute: () => rootRoute,
+    path: "/Pmr",
+    component: Pmr,
+});
+
 const routeTree = rootRoute.addChildren([
     topRoute,
     diagnosisRoute,
@@ -83,6 +90,7 @@ const routeTree = rootRoute.addChildren([
     beigunRoute,
     calmbreathingRoute,
     AliceRoute,
+    PmrRoute,
 ]);
 
 export const router = createRouter({
