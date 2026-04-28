@@ -35,6 +35,11 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Check required environment
+        run: test -n "$VITE_BACKEND_API_URL"
+        env:
+          VITE_BACKEND_API_URL: ${{ secrets.VITE_BACKEND_API_URL }}
+
       - name: Build
         run: npm run build
         env:
