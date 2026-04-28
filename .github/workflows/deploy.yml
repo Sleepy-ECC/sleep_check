@@ -39,6 +39,7 @@ jobs:
         run: npm run build
         env:
           GITHUB_PAGES: "true"
+          VITE_BACKEND_API_URL: ${{ secrets.VITE_BACKEND_API_URL }}
 
       - name: Add SPA fallback
         run: cp dist/index.html dist/404.html
