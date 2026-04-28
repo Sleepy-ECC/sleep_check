@@ -26,7 +26,7 @@ function Shuffle() {
                 <HituImg type="explanation" />
             </div>
             <div className="btns">
-                <Btn text="最初に戻る" path="/Diagnosis" color="gray" />
+                <Btn text="最初に戻る" path="/" color="gray" />
                 <Btn text="これにする" color="yellow" path="/ShuffleTimer" />
             </div>
         </>
