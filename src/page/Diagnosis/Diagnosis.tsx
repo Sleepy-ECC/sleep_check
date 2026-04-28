@@ -87,12 +87,7 @@ function Diagnosis() {
             />
 
             <div className="btn_group">
-                <Btn
-                    text="戻る"
-                    path=""
-                    color="gray"
-                    onClick={() => setStep((prev) => Math.max(prev - 1, 0))}
-                />
+                <Btn text="戻る" path="/" color="gray" />
 
                 <Btn
                     text={isLast ? "診断" : "進む"}
