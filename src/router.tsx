@@ -117,6 +117,9 @@ const routeTree = rootRoute.addChildren([
     whitenoiseRoute,
 ]);
 
+const basepath = import.meta.env.BASE_URL.replace(/\/$/, "") || "/";
+
 export const router = createRouter({
     routeTree,
+    basepath,
 });
