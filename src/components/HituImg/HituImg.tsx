@@ -5,9 +5,18 @@ import trembleHituji from "../../assets/tremble_hituji.png";
 import sleepHituji from "../../assets/sleep_hituji.png";
 import wakeupHituji from "../../assets/wakeup_hituji.png";
 import explanationHituji from "../../assets/explanation_hituji.png";
+import betSleepHituji from "../../assets/bet_sleep_hituji.png";
 
 type Props = {
-    type: "normal" | "surprise" | "headache" | "tremble" | "sleep" | "wakeup" | "explanation";
+    type:
+        | "normal"
+        | "surprise"
+        | "headache"
+        | "tremble"
+        | "sleep"
+        | "wakeup"
+        | "explanation"
+        | "betSleep";
 };
 
 export default function HituImg({ type }: Props) {
@@ -19,6 +28,7 @@ export default function HituImg({ type }: Props) {
         sleep: sleepHituji,
         wakeup: wakeupHituji,
         explanation: explanationHituji,
+        betSleep: betSleepHituji,
     };
 
     return (

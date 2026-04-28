@@ -10,7 +10,7 @@ type Select = {
 
 const selects: Array<Select> = [
     { text: "認知シャッフル睡眠法", path: "/Shuffle" },
-    { text: "米軍式睡眠法", path: "/" },
+    { text: "米軍式睡眠法", path: "/Beigun" },
     { text: "4-7-8呼吸法", path: "/" },
     { text: "アリス式睡眠法", path: "/" },
     { text: "イメージ誘導法", path: "/" },

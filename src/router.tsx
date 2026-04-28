@@ -6,6 +6,7 @@ import Shuffle from "./page/Shuffle/Shuffle";
 import ShuffleTimer from "./page/ShuffleTimer/ShuffleTimer";
 import Register from "./page/register/register";
 import Login from "./page/login/login";
+import Beigun from "./page/Beigun/Beigun";
 
 const rootRoute = createRootRoute();
 
@@ -51,6 +52,12 @@ const loginRoute = createRoute({
     component: Login,
 });
 
+const beigunRoute = createRoute({
+    getParentRoute: () => rootRoute,
+    path: "/Beigun",
+    component: Beigun,
+});
+
 const routeTree = rootRoute.addChildren([
     topRoute,
     diagnosisRoute,
@@ -59,6 +66,7 @@ const routeTree = rootRoute.addChildren([
     shuffleTimerRoute,
     registerRoute,
     loginRoute,
+    beigunRoute,
 ]);
 
 export const router = createRouter({
