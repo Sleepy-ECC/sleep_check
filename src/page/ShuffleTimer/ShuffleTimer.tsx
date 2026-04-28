@@ -1,4 +1,3 @@
-import { Link } from "@tanstack/react-router";
 import "./ShuffleTimer.css";
 import icon from "../../assets/question_icon.png";
 import Btn from "../../components/Btn/Btn";
