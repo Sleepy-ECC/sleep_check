@@ -50,7 +50,7 @@ function Diagnosis() {
     };
 
     const resultPages = [
-        "/gyakusetu",
+        "/Paradoxical",
         "/Alice",
         "/Shuffle",
         "/imageyudou",

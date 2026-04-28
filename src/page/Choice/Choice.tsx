@@ -16,7 +16,7 @@ const selects: Array<Select> = [
     { text: "イメージ誘導法", path: "/" },
     { text: "漸進的筋弛緩法", path: "/Pmr" },
     { text: "ホワイトノイズ", path: "/" },
-    { text: "逆説的意図", path: "/" },
+    { text: "逆説的意図", path: "/Paradoxical" },
 ];
 
 function Choice() {

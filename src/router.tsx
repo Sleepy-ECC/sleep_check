@@ -10,6 +10,7 @@ import Beigun from "./page/Beigun/Beigun";
 import CalmBreathing from "./page/CalmBreathing/CalmBreathing";
 import Alice from "./page/Alice/Alice";
 import Pmr from "./page/Pmr/Pmr";
+import Paradoxical from "./page/Paradoxical/Paradoxical";
 
 const rootRoute = createRootRoute();
 
@@ -79,6 +80,12 @@ const PmrRoute = createRoute({
     component: Pmr,
 });
 
+const ParadoxicalRoute = createRoute({
+    getParentRoute: () => rootRoute,
+    path: "/Paradoxical",
+    component: Paradoxical,
+});
+
 const routeTree = rootRoute.addChildren([
     topRoute,
     diagnosisRoute,
@@ -91,6 +98,7 @@ const routeTree = rootRoute.addChildren([
     calmbreathingRoute,
     AliceRoute,
     PmrRoute,
+    ParadoxicalRoute,
 ]);
 
 export const router = createRouter({
