@@ -2,6 +2,7 @@ import "./Pmr.css";
 import { useState } from "react";
 import HituImg from "../../components/HituImg/HituImg";
 import Btn from "../../components/Btn/Btn";
+import GraphButton from "../../components/GraphButton/GraphButton";
 
 function Pmr() {
     const [isOpen, setIsOpen] = useState(false);
@@ -48,7 +49,10 @@ function Pmr() {
                             <p>最後は全身に力を入れ、その後15〜30秒リラックスすると眠れるぞ~</p>
                         </div>
                     </div>
-                    <Btn text="閉じる" color="gray" onClick={() => setIsOpen(false)} />
+                    <div className="modal_actions">
+                        <GraphButton />
+                        <Btn text="閉じる" color="gray" onClick={() => setIsOpen(false)} />
+                    </div>
                 </div>
             )}
         </>

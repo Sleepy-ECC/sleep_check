@@ -96,7 +96,14 @@
             }
         }
     }
-    button {
+    .modal_actions {
+        display: flex;
+        justify-content: center;
+        gap: 24px;
         margin: 0 auto;
+        button,
+        a {
+            margin: 0;
+        }
     }
 }

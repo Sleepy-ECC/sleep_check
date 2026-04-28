@@ -5,6 +5,7 @@ import HituImg from "../../components/HituImg/HituImg";
 import MsgBox from "../../components/MsgBox/MsgBox";
 import QuestionBox from "../../components/QuestionBox/QuestionBox";
 import Btn from "../../components/Btn/Btn";
+import { saveRecommendedSleepMethodName } from "../../utils/recommendedSleepMethodStorage";
 
 function Diagnosis() {
     const [step, setStep] = useState(0);
@@ -60,6 +61,29 @@ function Diagnosis() {
         "/WhiteNoise",
     ];
 
+    const resultMethodNames = [
+        "逆説的意図",
+        "アリス式睡眠法",
+        "認知睡眠シャッフル法",
+        "イメージ誘導法",
+        "4-7-8呼吸法",
+        "米軍式睡眠法",
+        "漸進的筋弛緩法",
+        "ホワイトノイズ",
+    ];
+
+    const navigateToResult = (selectedAnswers: number[]) => {
+        const resultIndex = getResultIndex(selectedAnswers);
+        const path = resultPages[resultIndex];
+        const methodName = resultMethodNames[resultIndex];
+
+        if (methodName) {
+            saveRecommendedSleepMethodName(methodName);
+        }
+
+        navigate({ to: path });
+    };
+
     const imgPaths = ["normal", "surprise", "unazuki"] as const;
 
     return (
@@ -78,9 +102,7 @@ function Diagnosis() {
                     setAnswers(newAnswers);
 
                     if (isLast) {
-                        const resultIndex = getResultIndex(newAnswers);
-                        const path = resultPages[resultIndex];
-                        navigate({ to: path });
+                        navigateToResult(newAnswers);
                     } else {
                         setStep((prev) => prev + 1);
                     }
@@ -95,10 +117,7 @@ function Diagnosis() {
                     color={isLast ? "yellow" : "black"}
                     onClick={() => {
                         if (isLast) {
-                            const resultIndex = getResultIndex(answers);
-                            const path = resultPages[resultIndex];
-
-                            navigate({ to: path });
+                            navigateToResult(answers);
                         } else {
                             setStep((prev) => prev + 1);
                         }

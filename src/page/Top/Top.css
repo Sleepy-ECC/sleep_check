@@ -36,5 +36,9 @@
             text-align: center;
             min-width: 180px;
         }
+        .btn {
+            font-size: 1.6rem;
+            min-width: 180px;
+        }
     }
 }
