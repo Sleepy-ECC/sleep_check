@@ -50,14 +50,14 @@ function Diagnosis() {
     };
 
     const resultPages = [
-        "/Kari4",
+        "/gyakusetu",
         "/Alice",
         "/Shuffle",
-        "/Kari5",
+        "/imageyudou",
         "/CalmBreathing",
         "/Beigun",
-        "/Kari6",
-        "/Kari8",
+        "/Pmr",
+        "/whitenoise",
     ];
 
     const imgPaths = ["normal", "surprise", "unazuki"] as const;
