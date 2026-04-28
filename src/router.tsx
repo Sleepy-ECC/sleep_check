@@ -56,6 +56,7 @@ const routeTree = rootRoute.addChildren([
     diagnosisRoute,
     choiceRoute,
     shuffleRoute,
+    shuffleTimerRoute,
     registerRoute,
     loginRoute,
 ]);
