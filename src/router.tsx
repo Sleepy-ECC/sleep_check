@@ -7,6 +7,7 @@ import ShuffleTimer from "./page/ShuffleTimer/ShuffleTimer";
 import Register from "./page/register/register";
 import Login from "./page/login/login";
 import Beigun from "./page/Beigun/Beigun";
+import CalmBreathing from "./page/CalmBreathing/CalmBreathing";
 
 const rootRoute = createRootRoute();
 
@@ -58,6 +59,12 @@ const beigunRoute = createRoute({
     component: Beigun,
 });
 
+const calmbreathingRoute = createRoute({
+    getParentRoute: () => rootRoute,
+    path: "/CalmBreathing",
+    component: CalmBreathing,
+});
+
 const routeTree = rootRoute.addChildren([
     topRoute,
     diagnosisRoute,
@@ -67,6 +74,7 @@ const routeTree = rootRoute.addChildren([
     registerRoute,
     loginRoute,
     beigunRoute,
+    calmbreathingRoute,
 ]);
 
 export const router = createRouter({

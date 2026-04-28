@@ -1,0 +1,102 @@
+.top_title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    h2 {
+        color: #fff;
+        font-size: 1.6rem;
+    }
+    h1 {
+        color: #fff;
+        font-size: 2.6rem;
+    }
+}
+
+.info_msg {
+    padding: 40px 20px 200px;
+    margin: 40px 25px 0;
+    border: #d9d9d9 solid 1px;
+    border-radius: 32px;
+    background-color: #2b4164;
+    position: relative;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    h2 {
+        color: #fff;
+        font-size: 2.4rem;
+        font-weight: normal;
+        text-align: center;
+    }
+    p {
+        margin-top: 25px;
+        font-size: 1.6rem;
+        color: #fff;
+        span {
+            color: #ffc800;
+        }
+    }
+    img {
+        position: absolute;
+        bottom: 0;
+        right: 16px;
+        width: 180px;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 12px;
+    }
+}
+
+.btns {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 40px 0;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(to bottom, #08274b, #2c629f);
+    .modal_content {
+        border: 1px solid #d9d9d9;
+        border-radius: 32px;
+        background-color: #2b4164;
+        height: 600px;
+        margin: 60px 30px 32px;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        padding: 30px;
+        .step_wrap {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            h2 {
+                font-size: 1.4rem;
+                color: #fff;
+            }
+            p {
+                text-align: center;
+                color: #fff;
+                font-size: 1.6rem;
+                span {
+                    color: #ffc800;
+                }
+            }
+        }
+        picture {
+            text-align: center;
+            img {
+                width: 140px;
+            }
+        }
+    }
+    button {
+        margin: 0 auto;
+    }
+}
