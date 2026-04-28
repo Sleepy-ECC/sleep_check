@@ -55,8 +55,8 @@ function Diagnosis() {
         "/Shuffle",
         "/Kari4",
         "/Kari5",
+        "/Beigun",
         "/Kari6",
-        "/Kari7",
         "/Kari8",
     ];
 
