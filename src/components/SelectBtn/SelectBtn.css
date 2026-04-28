@@ -11,6 +11,7 @@
     transition: 0.2s;
     &:hover {
         border: #ffc800 solid 2px;
+        transform: scale(1.03);
     }
     img {
         width: 90px;

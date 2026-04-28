@@ -12,11 +12,11 @@ function Top() {
                 <HituImg type="normal" />
                 <div className="select_btns">
                     <Link to="/Diagnosis">
-                        <SelectBtn text="診断で選ぶ" type="normal" />
+                        <SelectBtn text="診断で選ぶ" type="uranai" />
                     </Link>
 
                     <Link to="/Choice">
-                        <SelectBtn text="自分で選ぶ" type="normal" />
+                        <SelectBtn text="自分で選ぶ" type="choice" />
                     </Link>
                 </div>
                 <div className="foot_link">
