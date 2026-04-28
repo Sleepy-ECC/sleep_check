@@ -24,7 +24,7 @@ function Choice() {
         <>
             <div className="choice_lists">
                 {selects.map((item, index) => (
-                    <ChoiceList text={item.text} path={item.path} index={index} />
+                    <ChoiceList key={item.path} text={item.text} path={item.path} index={index} />
                 ))}
             </div>
             <div className="back_btn">

@@ -1,6 +1,7 @@
 import "./ShuffleTimer.css";
 import icon from "../../assets/question_icon.png";
 import Btn from "../../components/Btn/Btn";
+import GraphButton from "../../components/GraphButton/GraphButton";
 import HituImg from "../../components/HituImg/HituImg";
 import { useState } from "react";
 import { useCognitiveShuffleSpeech } from "../../hooks/useCognitiveShuffleSpeech";
@@ -51,6 +52,7 @@ function ShuffleTimer() {
             <div className="btns">
                 <Btn text="終了" color="gray" />
                 <Btn text="スタート" color="yellow" onClick={handleStart} />
+                <GraphButton />
             </div>
             {isOpen && (
                 <div className="modal">

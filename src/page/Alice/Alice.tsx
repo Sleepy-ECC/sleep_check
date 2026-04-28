@@ -2,6 +2,7 @@ import "./Alice.css";
 import { useState } from "react";
 import HituImg from "../../components/HituImg/HituImg";
 import Btn from "../../components/Btn/Btn";
+import GraphButton from "../../components/GraphButton/GraphButton";
 
 function Alice() {
     const [isOpen, setIsOpen] = useState(false);
@@ -55,7 +56,10 @@ function Alice() {
                         </div>
                         <HituImg type="betSleep" />
                     </div>
-                    <Btn text="閉じる" color="gray" onClick={() => setIsOpen(false)} />
+                    <div className="modal_actions">
+                        <GraphButton />
+                        <Btn text="閉じる" color="gray" onClick={() => setIsOpen(false)} />
+                    </div>
                 </div>
             )}
         </>

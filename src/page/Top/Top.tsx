@@ -1,11 +1,18 @@
 import "./Top.css";
-import { Link } from "@tanstack/react-router";
+import { Link, useNavigate } from "@tanstack/react-router";
 import SelectBtn from "../../components/SelectBtn/SelectBtn";
 import MsgBox from "../../components/MsgBox/MsgBox";
 import HituImg from "../../components/HituImg/HituImg";
 import Btn from "../../components/Btn/Btn";
+import { getAccessToken } from "../../utils/authStorage";
 
 function Top() {
+    const navigate = useNavigate();
+
+    const handleMemoryClick = async () => {
+        await navigate({ to: getAccessToken() ? "/Memory" : "/login" });
+    };
+
     return (
         <>
             <div className="wrapper">
@@ -21,7 +28,7 @@ function Top() {
                     </Link>
                 </div>
                 <div className="foot_link">
-                    <Btn text="睡眠記録を確認" color="yellow" path="/Memory" />
+                    <Btn text="睡眠記録を確認" color="yellow" onClick={handleMemoryClick} />
                     <Link to="/login">ログイン・新規登録はこちら</Link>
                 </div>
             </div>
