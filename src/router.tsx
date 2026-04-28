@@ -8,6 +8,7 @@ import Register from "./page/register/register";
 import Login from "./page/login/login";
 import Beigun from "./page/Beigun/Beigun";
 import CalmBreathing from "./page/CalmBreathing/CalmBreathing";
+import Alice from "./page/Alice/Alice";
 
 const rootRoute = createRootRoute();
 
@@ -65,6 +66,12 @@ const calmbreathingRoute = createRoute({
     component: CalmBreathing,
 });
 
+const AliceRoute = createRoute({
+    getParentRoute: () => rootRoute,
+    path: "/Alice",
+    component: Alice,
+});
+
 const routeTree = rootRoute.addChildren([
     topRoute,
     diagnosisRoute,
@@ -75,6 +82,7 @@ const routeTree = rootRoute.addChildren([
     loginRoute,
     beigunRoute,
     calmbreathingRoute,
+    AliceRoute,
 ]);
 
 export const router = createRouter({

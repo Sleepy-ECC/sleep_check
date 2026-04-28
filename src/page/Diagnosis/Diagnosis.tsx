@@ -50,11 +50,11 @@ function Diagnosis() {
     };
 
     const resultPages = [
-        "/Kari2",
-        "/Kari3",
-        "/Shuffle",
         "/Kari4",
+        "/Alice",
+        "/Shuffle",
         "/Kari5",
+        "/CalmBreathing",
         "/Beigun",
         "/Kari6",
         "/Kari8",
