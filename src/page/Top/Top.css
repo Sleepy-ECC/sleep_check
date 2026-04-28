@@ -24,12 +24,17 @@
     }
     .foot_link {
         display: flex;
+        flex-direction: column;
         justify-content: center;
+        gap: 30px;
         align-items: center;
-        margin-top: 100px;
+        margin-top: 90px;
+        padding-bottom: 80px;
         a {
             color: #fff;
             font-size: 1.6rem;
+            text-align: center;
+            min-width: 180px;
         }
     }
 }

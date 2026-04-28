@@ -1,0 +1,24 @@
+.view_wrap {
+    border: 1px solid #d9d9d9;
+    border-radius: 16px;
+    padding: 16px;
+    background-color: #2b4164;
+    display: flex;
+    flex-direction: column;
+    .view_title {
+        display: flex;
+        justify-content: center;
+        h2 {
+            color: #ffc800;
+            font-size: 1.6rem;
+        }
+        p {
+            color: #f0f0f0;
+            font-size: 1.4rem;
+        }
+    }
+    h3 {
+        font-size: 2.8rem;
+        color: #fff;
+    }
+}

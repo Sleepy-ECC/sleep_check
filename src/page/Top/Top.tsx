@@ -3,6 +3,7 @@ import { Link } from "@tanstack/react-router";
 import SelectBtn from "../../components/SelectBtn/SelectBtn";
 import MsgBox from "../../components/MsgBox/MsgBox";
 import HituImg from "../../components/HituImg/HituImg";
+import Btn from "../../components/Btn/Btn";
 
 function Top() {
     return (
@@ -20,6 +21,7 @@ function Top() {
                     </Link>
                 </div>
                 <div className="foot_link">
+                    <Btn text="睡眠記録を確認" color="yellow" path="/Memory" />
                     <Link to="/login">ログイン・新規登録はこちら</Link>
                 </div>
             </div>
