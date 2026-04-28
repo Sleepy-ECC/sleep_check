@@ -6,6 +6,8 @@ import sleepHituji from "../../assets/sleep_hituji.png";
 import wakeupHituji from "../../assets/wakeup_hituji.png";
 import explanationHituji from "../../assets/explanation_hituji.png";
 import betSleepHituji from "../../assets/bet_sleep_hituji.png";
+import uranaiHituji from "../../assets/uranai_hituji.png";
+import choiceHituji from "../../assets/choice_hituji.png";
 
 type Props = {
     type:
@@ -16,7 +18,9 @@ type Props = {
         | "sleep"
         | "wakeup"
         | "explanation"
-        | "betSleep";
+        | "betSleep"
+        | "uranai"
+        | "choice";
 };
 
 export default function HituImg({ type }: Props) {
@@ -29,6 +33,8 @@ export default function HituImg({ type }: Props) {
         wakeup: wakeupHituji,
         explanation: explanationHituji,
         betSleep: betSleepHituji,
+        uranai: uranaiHituji,
+        choice: choiceHituji,
     };
 
     return (
