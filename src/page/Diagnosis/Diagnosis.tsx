@@ -30,14 +30,14 @@ function Diagnosis() {
         {
             text: "次はどうしてみるのじゃ？",
             choices: [
-                { text: "イメージする", type: "normal" },
-                { text: "手順に従う", type: "normal" },
+                { text: "イメージする", type: "image" },
+                { text: "手順に従う", type: "procedure" },
             ],
         },
         {
             text: "最後はどんな気持ちじゃ？",
             choices: [
-                { text: "寝ないと！", type: "surprise" },
+                { text: "寝ないと！", type: "sleep" },
                 { text: "まぁいいや〜", type: "wakeup" },
             ],
         },
@@ -60,11 +60,13 @@ function Diagnosis() {
         "/Kari8",
     ];
 
+    const imgPaths = ["normal", "surprise", "unazuki"] as const;
+
     return (
         <>
             <div className="title">
                 <MsgBox text="診断を始めるぞう" />
-                <HituImg type="normal" />
+                <HituImg type={imgPaths[step]} />
             </div>
 
             <QuestionBox
@@ -78,7 +80,6 @@ function Diagnosis() {
                     if (isLast) {
                         const resultIndex = getResultIndex(newAnswers);
                         const path = resultPages[resultIndex];
-
                         navigate({ to: path });
                     } else {
                         setStep((prev) => prev + 1);
