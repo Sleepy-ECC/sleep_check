@@ -13,9 +13,9 @@ const selects: Array<Select> = [
     { text: "米軍式睡眠法", path: "/Beigun" },
     { text: "4-7-8呼吸法", path: "/CalmBreathing" },
     { text: "アリス式睡眠法", path: "/Alice" },
-    { text: "イメージ誘導法", path: "/" },
+    { text: "イメージ誘導法", path: "/ImageRelax" },
     { text: "漸進的筋弛緩法", path: "/Pmr" },
-    { text: "ホワイトノイズ", path: "/" },
+    { text: "ホワイトノイズ", path: "/WhiteNoise" },
     { text: "逆説的意図", path: "/Paradoxical" },
 ];
 

@@ -11,6 +11,8 @@ import CalmBreathing from "./page/CalmBreathing/CalmBreathing";
 import Alice from "./page/Alice/Alice";
 import Pmr from "./page/Pmr/Pmr";
 import Paradoxical from "./page/Paradoxical/Paradoxical";
+import ImageRelax from "./page/ImageRelax/ImageRelax";
+import WhiteNoise from "./page/WhiteNoise/WhiteNoise";
 
 const rootRoute = createRootRoute();
 
@@ -86,6 +88,18 @@ const ParadoxicalRoute = createRoute({
     component: Paradoxical,
 });
 
+const ImageRelaxRoute = createRoute({
+    getParentRoute: () => rootRoute,
+    path: "/ImageRelax",
+    component: ImageRelax,
+});
+
+const whitenoiseRoute = createRoute({
+    getParentRoute: () => rootRoute,
+    path: "/WhiteNoise",
+    component: WhiteNoise,
+});
+
 const routeTree = rootRoute.addChildren([
     topRoute,
     diagnosisRoute,
@@ -99,6 +113,8 @@ const routeTree = rootRoute.addChildren([
     AliceRoute,
     PmrRoute,
     ParadoxicalRoute,
+    ImageRelaxRoute,
+    whitenoiseRoute,
 ]);
 
 export const router = createRouter({

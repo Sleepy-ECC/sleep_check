@@ -53,11 +53,11 @@ function Diagnosis() {
         "/Paradoxical",
         "/Alice",
         "/Shuffle",
-        "/imageyudou",
+        "/ImageRelax",
         "/CalmBreathing",
         "/Beigun",
         "/Pmr",
-        "/whitenoise",
+        "/WhiteNoise",
     ];
 
     const imgPaths = ["normal", "surprise", "unazuki"] as const;
